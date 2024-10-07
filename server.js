@@ -12,7 +12,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/employees/random", (req, res) => {
-  const randomEmployee = employees[Math.floor(Math.random() * employees.lenth)];
+  // Get random Index from array
+  const randomIndex = Math.floor(Math.random() * employees.length);
+  // Use randomIndex to pull to pull from array
+  const randomEmployee = employees[randomIndex];
   res.json(randomEmployee);
 });
 
